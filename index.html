@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body onload="init()">
+
+    <div class="board-container">
+        <div class="leaderboard">
+            <h3>My best score (easy)🏆</h3>
+            <p><span></span> <br> Seconds</p>
+        </div>
+        <div class="green-square1">
+            <h1 class="main-title">MineSweeper! by <u>Noam Yaffe</u></h1>
+        </div>
+        <div class="green-square2"></div>
+        <div class="inner-board-container">
+            <div class="game-info">
+                <div class="difficulty">
+                    <div><input onclick="changeLevel()" type="radio" id="2" name="difficulty" checked value="4">
+                        <label for="2">Easy</label>
+                    </div>
+                    <div><input onclick="changeLevel()" type="radio" id="12" name="difficulty" value="8">
+                        <label for="12">Medium</label>
+                    </div>
+                    <div><input onclick="changeLevel()" type="radio" id="30" name="difficulty" value="12">
+                        <label for="30">hard</label>
+                    </div>
+                </div>
+                <div class="lives-section">
+                    <h2 class="lives">❤️<span>3</span> </h2>
+                </div>
+                <div class="timer-flags-reset">
+                    <div>
+                        <h2 class="timer">🕒 <span>0.00</span> </h2>
+                    </div>
+                    <div><span class="emoji" onclick="resetGame()">😀</span></div>
+                    <div>
+                        <h2 class="flags">🚩<span></span> </h2>
+                    </div>
+                </div>
+
+            </div>
+            <table oncontextmenu="return false;">
+            </table>
+        </div>
+    </div>
+
+    <script src="js/util.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/mines.js"></script>
+</body>
+
+</html>
